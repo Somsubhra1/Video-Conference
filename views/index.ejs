@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+      integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX"
+      crossorigin="anonymous"
+    />
+
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Index CSS File -->
+    <link rel="stylesheet" href="css/index.css" />
+
+    <title>Video Conference App</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Video Conference App</h1>
+      </div>
+      <div class="row">
+        <div
+          class="col-md-6 mb-5 d-flex justify-content-center align-items-center start_meet"
+        >
+          <h3>Create a meeting room</h3>
+          <div class="row">
+            <div class="col-12">
+              <a class="btn btn-success btn-lg" href="<%= roomId  %> "
+                >Start instant meeting</a
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-md-6 mb-5 d-flex justify-content-start align-items-center join_room"
+        >
+          <h3>Join an exsisting room</h3>
+
+          <div class="row d-flex justify-content-center">
+            <div class="col-7">
+              <input
+                type="text"
+                class="form-control"
+                id="roomIdInput"
+                placeholder="Enter room id"
+              />
+            </div>
+            <div class="col-5">
+              <button
+                type="button"
+                onclick="join()"
+                class="btn btn-primary d-inline"
+              >
+                Join Room
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js"
+      integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      // Room join handler function
+      const join = () => {
+        window.location.href = `/${
+          document.getElementById("roomIdInput").value
+        }`;
+      };
+    </script>
+  </body>
+</html>

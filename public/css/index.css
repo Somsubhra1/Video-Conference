@@ -1,0 +1,28 @@
+body {
+  background: url("../assets/entry-bkg-img.jpg") no-repeat center center fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  font-family: "Lato", sans-serif;
+  color: white;
+}
+
+.jumbotron {
+  background-color: transparent;
+  text-align: center;
+}
+
+.join_room {
+  flex-direction: column;
+}
+
+.start_meet {
+  flex-direction: column;
+}
+
+.meet-disconnect {
+  columns: 0cm;
+  display: flex;
+  object-fit: contain;
+  direction: ltr;
+}
